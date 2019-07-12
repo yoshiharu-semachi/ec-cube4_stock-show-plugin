@@ -10,5 +10,5 @@
 管理画面のプラグイン設定から表示する残り在庫数を指定できます。
 
 ## EC-CUBE4系について
-[EC-CUBE4とは ](https://www.ec-cube.net/product/4.0/)
+[EC-CUBE4とは ](https://www.ec-cube.net/product/4.0/)   
 [EC-CUBE 4.0 開発ドキュメント](http://doc4.ec-cube.net/)
