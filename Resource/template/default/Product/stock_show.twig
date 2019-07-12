@@ -1,7 +1,7 @@
 {# Style #}
 <style type="text/css">
     #stock_show_area{
-        padding: 5px 0;
+        padding: 0 0 14px 0;
         border-bottom: 1px dotted #ccc;
     }
 
@@ -25,11 +25,10 @@
     });
 </script>
 
-{# 商品在庫表示エリア#}
-{# 規格あり商品は規格が選択された時に在庫数を表示する #}
+{# 規格あり商品の場合 #}
 {% if Product.hasProductClass %}
     
-{# 規格なし商品は在庫数をそのまま表示 #}
+{# 規格なし商品の場合 #}
 {% else %}
     {% if Product.getStockMin > 0 and Product.getStockMin <= StockQtyShow %}
         <div id="stock_show_area">
