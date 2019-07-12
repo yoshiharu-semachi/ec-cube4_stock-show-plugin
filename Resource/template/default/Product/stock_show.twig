@@ -1,0 +1,40 @@
+{# Style #}
+<style type="text/css">
+    #stock_show_area{
+        padding: 5px 0;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    #stock_show_area p{
+        font-size: 18px;
+    }
+
+    #stock_show_area strong{
+        font-size: 35px;
+    }
+
+    #stock_show_area .order_soon{
+        font-size: 20px;
+    }
+</style>
+
+<script>
+    {# JQueryのinsertAfterを使いProduct/detail.twigの<div class="ec-productRole__tags">の直後に挿入#}
+    $(function () {
+        $('#stock_show_area').insertAfter($('.ec-productRole__tags'));
+    });
+</script>
+
+{# 商品在庫表示エリア#}
+{# 規格あり商品は規格が選択された時に在庫数を表示する #}
+{% if Product.hasProductClass %}
+    
+{# 規格なし商品は在庫数をそのまま表示 #}
+{% else %}
+    {% if Product.getStockMin > 0 and Product.getStockMin <= StockQtyShow %}
+        <div id="stock_show_area">
+            <p>残り <strong>{{ Product.getStockMin }}</strong> 点です</p>
+            <p class="order_soon">ご注文はお早めに!!</p>
+        </div>
+    {% endif %}
+{% endif %}
