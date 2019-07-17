@@ -8,9 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
  * Config
  *
  * @ORM\Table(name="plg_stock_show4_config")
- * @ORM\Entity(repositoryClass="Plugin\StockShow4\Repository\ConfigRepository")
+ * @ORM\Entity(repositoryClass="Plugin\StockShow4\Repository\StockShowConfigRepository")
  */
-class Config
+class StockShowConfig
 {
     /**
      * @var int
