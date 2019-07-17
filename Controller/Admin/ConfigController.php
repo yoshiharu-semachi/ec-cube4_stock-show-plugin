@@ -2,8 +2,8 @@
 
 namespace Plugin\StockShow4\Controller\Admin;
 
-use Plugin\StockShow4\Form\Type\Admin\ConfigType;
-use Plugin\StockShow4\Repository\ConfigRepository;
+use Plugin\StockShow4\Form\Type\Admin\StockShowConfigType;
+use Plugin\StockShow4\Repository\StockShowConfigRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,14 +20,14 @@ class ConfigController extends \Eccube\Controller\AbstractController
      * @Template("@StockShow4/admin/config.twig")
      * 
      * @param Request $request
-     * @param ConfigRepository $configRepository
+     * @param StockShowConfigRepository $configRepository
      * 
      * @return array
      */
-    public function index(Request $request, ConfigRepository $configRepository)
+    public function index(Request $request, StockShowConfigRepository $configRepository)
     {
         $Config = $configRepository->get();
-        $form = $this->createForm(ConfigType::class, $Config);
+        $form = $this->createForm(StockShowConfigType::class, $Config);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -35,6 +35,7 @@ class ConfigController extends \Eccube\Controller\AbstractController
             $this->entityManager->persist($Config);
             $this->entityManager->flush($Config);
 
+            log_info('Stock show config', ['status' => 'Success']);
             $this->addSuccess('登録しました。', 'admin');
 
             return $this->redirectToRoute('stock_show4_admin_config');
