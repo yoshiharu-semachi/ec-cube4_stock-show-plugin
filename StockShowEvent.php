@@ -3,22 +3,22 @@
 namespace Plugin\StockShow4;
 
 use Eccube\Event\TemplateEvent;
-use Plugin\StockShow4\Repository\ConfigRepository;
+use Plugin\StockShow4\Repository\StockShowConfigRepository;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class StockShowEvent implements EventSubscriberInterface
 {
     /**
-     * @var ConfigRepository
+     * @var StockShowConfigRepository
      */
     protected $ConfigRepository;
 
     /**
      * ProductReview constructor.
      * 
-     * @param ConfigRepository $ConfigRepository
+     * @param StockShowConfigRepository $ConfigRepository
      */
-    public function __construct(ConfigRepository $ConfigRepository)
+    public function __construct(StockShowConfigRepository $ConfigRepository)
     {
         $this->ConfigRepository = $ConfigRepository;
     }
