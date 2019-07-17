@@ -4,7 +4,7 @@ namespace Plugin\StockShow4;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Eccube\Plugin\AbstractPluginManager;
-use Plugin\StockShow4\Entity\Config;
+use Plugin\StockShow4\Entity\StockShowConfig;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class PluginManager extends AbstractPluginManager
@@ -28,11 +28,11 @@ class PluginManager extends AbstractPluginManager
      */
     protected function createConfig(EntityManagerInterface $em)
     {
-        $Config = $em->find(Config::class, 1);
+        $Config = $em->find(StockShowConfig::class, 1);
         if ($Config) {
             return $Config;
         }
-        $Config = new Config();
+        $Config = new StockShowConfig();
         $Config->setStockQtyShow(5);
 
         $em->persist($Config);
