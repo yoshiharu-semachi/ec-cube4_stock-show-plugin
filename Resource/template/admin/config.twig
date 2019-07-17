@@ -5,14 +5,10 @@
 {% block title %}StockShow4{% endblock %}
 {% block sub_title %}プラグイン一覧{% endblock %}
 
-{% block stylesheet %}{% endblock stylesheet %}
-
-{% block javascript %}{% endblock javascript %}
-
 {% form_theme form '@admin/Form/bootstrap_4_horizontal_layout.html.twig' %}
 
 {% block main %}
-    <form method="post" role="form" action="{{ url('stock_show4_admin_config') }}">
+    <form method="post" action="{{ url('stock_show4_admin_config') }}">
 
         {{ form_widget(form._token) }}
 
@@ -44,8 +40,7 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="col-6">
                         <div class="c-conversionArea__leftBlockItem">
-                            <a class="c-baseLink"
-                               href="{{ url('admin_store_plugin') }}">
+                            <a class="c-baseLink" href="{{ url('admin_store_plugin') }}">
                                 <i class="fa fa-backward" aria-hidden="true"></i>
                                 <span>プラグイン一覧</span>
                             </a>
@@ -54,8 +49,7 @@
                     <div class="col-6">
                         <div class="row align-items-center justify-content-end">
                             <div class="col-auto">
-                                <button class="btn btn-ec-conversion px-5"
-                                        type="submit">登録</button>
+                                <button class="btn btn-ec-conversion px-5" type="submit">登録</button>
                             </div>
                         </div>
                     </div>
