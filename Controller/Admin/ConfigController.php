@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * This file is part of EC-CUBE
+ *
+ * Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+ *
+ * http://www.ec-cube.co.jp/
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Plugin\StockShow4\Controller\Admin;
 
 use Plugin\StockShow4\Form\Type\Admin\StockShowConfigType;
@@ -13,15 +24,13 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class ConfigController extends \Eccube\Controller\AbstractController
 {
-    
-
     /**
      * @Route("/%eccube_admin_route%/stock_show4/config", name="stock_show4_admin_config")
      * @Template("@StockShow4/admin/config.twig")
-     * 
+     *
      * @param Request $request
      * @param StockShowConfigRepository $configRepository
-     * 
+     *
      * @return array
      */
     public function index(Request $request, StockShowConfigRepository $configRepository)

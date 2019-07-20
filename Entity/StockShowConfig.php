@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * This file is part of EC-CUBE
+ *
+ * Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+ *
+ * http://www.ec-cube.co.jp/
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Plugin\StockShow4\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -30,7 +41,7 @@ class StockShowConfig
 
     /**
      * Get id.
-     * 
+     *
      * @return int
      */
     public function getId()
@@ -40,7 +51,7 @@ class StockShowConfig
 
     /**
      * Get StockQtyShow
-     * 
+     *
      * @return int
      */
     public function getStockQtyShow()
@@ -50,7 +61,7 @@ class StockShowConfig
 
     /**
      * Set $qty
-     * 
+     *
      * @param int $qty
      *
      * @return $this;
