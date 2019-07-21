@@ -10,6 +10,14 @@
 ## プラグイン設定
 管理画面のプラグイン設定から表示する残り在庫数を指定できます。
 
+## CIを利用したプラグインのテスト
+TravisCIを使い複数環境でテストを行いました。   
+テスト環境の詳細は[.travis.yml](https://github.com/yoshiharu-semachi/ec-cube4_stock-show-plugin/tree/master/.travis.yml)をご確認ください。
+
+## Qiita
+今回開発したプラグインの作成手順をQiitaの記事にまとめています。   
+[EC-CUBE４系のプラグインを作ってみた｜Qiita](https://qiita.com/yoshiharu-semachi/items/03817d6dd883b000348f)
+
 ## EC-CUBE4系について
 - [EC-CUBE4とは ](https://www.ec-cube.net/product/4.0/)
 - [EC-CUBE 4.0 開発ドキュメント](http://doc4.ec-cube.net/)
