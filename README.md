@@ -1,5 +1,7 @@
 # EC-CUBE4系プラグイン「残り在庫数表示プラグイン」
 
+[![Build Status](https://travis-ci.org/yoshiharu-semachi/ec-cube4_stock-show-plugin.svg?branch=master)](https://travis-ci.org/yoshiharu-semachi/ec-cube4_stock-show-plugin)
+
 ## 概要
 商品の在庫数が指定した数以下になったとき、その商品の残り在庫数を表示するプラグインです。
 
