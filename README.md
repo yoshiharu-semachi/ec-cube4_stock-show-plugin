@@ -7,10 +7,12 @@
 
 ## フロント（商品詳細ページ）
 「残り〜点ですご注文はお早めに!!」と表示されます。   
-※現時点で規格ありの商品には対応していません。
+※現時点で規格ありの商品には対応していません。   
+<img src="https://github.com/yoshiharu-semachi/ec-cube4_stock-show-plugin/blob/images/StockShow4-1.jpg" width="1200">
 
 ## プラグイン設定
-管理画面のプラグイン設定から表示する残り在庫数を指定できます。
+管理画面のプラグイン設定から表示する残り在庫数を指定できます。   
+<img src="https://github.com/yoshiharu-semachi/ec-cube4_stock-show-plugin/blob/images/StockShow4-2.jpg" width="1200">
 
 ## CIを利用したプラグインのテスト
 TravisCIを使い複数環境でテストを行いました。   
